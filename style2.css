@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+.container{
+  display: flex;
+  justify-content: space-around;
+  animation-name: container;
+  animation-duration: 2s;
+  width: 70%;
+  margin: auto auto;
+  padding: 50px;
+}
+.one-1, .two .one-1, .three .one-1{
+  /* transform: translateX(-100px); */
+  animation-name: div;
+  animation-duration: 2s;
+/* animation-delay: 2s; */
+	position: absolute;
+  z-index: 2;
+	top: 150px;
+	left: 50px;
+	width: 100px;
+	height: 180px;
+	background: rgb(163, 205, 219);
+  display: inline-block;
+}
+.one, .two, .three{
+  background-color: green;
+  width: 200px;
+  height: 300px;
+  color: white;
+  animation-name: animate1;
+  animation-duration: 2s;
+}
+h1{
+  animation-name: head;
+  animation-duration: 2s;
+}
+@keyframes div {
+  0%{
+    transform: translateY(-300px);
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 100px;
+display: block;
+  }
+50%{
+  transform: translateY(100px);
+  display: block;
+  background-color: aqua;
+}
+100%{
+  transform: translateY(-100px); 
+  display: block; 
+  position: absolute;
+	top: 150px;
+	left: 50px;
+	width: 100px;
+  
+}
+}
+@keyframes animate1 {
+  0%{
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  50%{
+    opacity: 0.5;
+    transform: translateY(100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+@keyframes head {
+  0%{
+    transform: translateX(-100px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes container {
+  0%{
+    background-color: white;
+    border: 10px solid green;
+    border-radius: 10px;
+  }
+  100%{
+    background-color: white;
+    border: 10px solid green;
+    border-radius: 20px;
+  }
+}
